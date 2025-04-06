@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ypevzv3ee-go-gitops
+  description: This is GitOps manifest for ypevzv3ee-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=ypevzv3ee-go
+    backstage.io/kubernetes-id: ypevzv3ee-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: ypevzv3ee-go
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:ypevzv3ee-go
